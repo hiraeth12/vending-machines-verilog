@@ -1,0 +1,49 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/intelFPGA/quartus/bin64/vending/simulation/questa
+T_opt
+!s110 1736165353
+VZWQgc9NQg9m[;QU[a?c2[0
+04 24 4 work vending_machine_18105070 fast 0
+=1-e4a8dfca7fba-677bc7e9-e-5a9c
+R0
+!s12b OEM100
+!s124 OEM10U1 
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vvending_machine_18105070
+2D:/intelFPGA/quartus/bin64/vending/vending_machine_18105070.v
+!s110 1736165342
+!i10b 1
+!s100 PBICOlj]<I<59i89Pi60^0
+Ie?mL54`_co^V2o=H59IcJ2
+R1
+w1736162198
+8D:/intelFPGA/quartus/bin64/vending/vending_machine_18105070.v
+FD:/intelFPGA/quartus/bin64/vending/vending_machine_18105070.v
+!i122 0
+L0 1 70
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1736165342.000000
+!s107 D:/intelFPGA/quartus/bin64/vending/vending_machine_18105070.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA/quartus/bin64/vending|D:/intelFPGA/quartus/bin64/vending/vending_machine_18105070.v|
+!i113 0
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/intelFPGA/quartus/bin64/vending -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
