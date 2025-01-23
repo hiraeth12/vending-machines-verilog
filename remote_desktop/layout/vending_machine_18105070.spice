@@ -1,0 +1,139 @@
+* NGSPICE file created from vending_machine_18105070.ext - technology: scmos
+
+* Black-box entry subcircuit for NOR3X1 abstract view
+.subckt NOR3X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for OAI21X1 abstract view
+.subckt OAI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND3X1 abstract view
+.subckt NAND3X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AOI21X1 abstract view
+.subckt AOI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for DFFPOSX1 abstract view
+.subckt DFFPOSX1 Q CLK D gnd vdd
+.ends
+
+* Black-box entry subcircuit for AOI22X1 abstract view
+.subckt AOI22X1 A B C D gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NOR2X1 abstract view
+.subckt NOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for XNOR2X1 abstract view
+.subckt XNOR2X1 A B gnd Y vdd
+.ends
+
+.subckt vending_machine_18105070 gnd vdd change[1] change[0] clk in[1] in[0] out rst
+X_66_ rst _88_/Q _70_/B gnd _86_/A vdd NOR3X1
+X_49_ _81_/B _61_/B gnd _55_/B vdd NAND2X1
+XSFILL7600x2100 gnd vdd FILL
+X_83_ in[0] _83_/B _85_/A gnd _86_/B vdd OAI21X1
+X_48_ _92_/Q _88_/Q _78_/A gnd _81_/B vdd OAI21X1
+X_65_ in[1] _65_/B _86_/C gnd _74_/A vdd NAND3X1
+X_82_ in[1] _95_/A gnd _85_/A vdd NAND2X1
+XSFILL3600x2100 gnd vdd FILL
+XSFILL3280x2100 gnd vdd FILL
+X_81_ _81_/A _81_/B _81_/C gnd _87_/B vdd AOI21X1
+XSFILL8400x4100 gnd vdd FILL
+X_47_ rst gnd _78_/A vdd INVX1
+XSFILL8080x4100 gnd vdd FILL
+X_63_ _93_/A gnd _72_/C vdd INVX1
+X_64_ rst _72_/C in[0] gnd _65_/B vdd OAI21X1
+X_80_ _95_/A gnd _87_/A vdd INVX1
+XSFILL3120x2100 gnd vdd FILL
+XSFILL7440x100 gnd vdd FILL
+X_46_ _85_/B gnd _61_/B vdd INVX1
+X_62_ _62_/A _62_/B _62_/C gnd _88_/D vdd NAND3X1
+XSFILL7920x4100 gnd vdd FILL
+X_61_ _88_/Q _61_/B _61_/C gnd _62_/C vdd OAI21X1
+X_44_ in[1] gnd _83_/B vdd INVX1
+X_45_ in[0] _83_/B gnd _85_/B vdd NAND2X1
+XSFILL3120x100 gnd vdd FILL
+X_60_ _84_/B in[1] _81_/B gnd _62_/A vdd NAND3X1
+XSFILL3280x100 gnd vdd FILL
+XSFILL2960x4100 gnd vdd FILL
+XSFILL7600x100 gnd vdd FILL
+XSFILL2800x4100 gnd vdd FILL
+XSFILL7600x6100 gnd vdd FILL
+XSFILL7280x6100 gnd vdd FILL
+XSFILL3760x6100 gnd vdd FILL
+XSFILL7120x6100 gnd vdd FILL
+XSFILL3600x6100 gnd vdd FILL
+XSFILL3280x6100 gnd vdd FILL
+X_79_ _79_/A _79_/B _79_/C gnd _91_/D vdd OAI21X1
+XSFILL7760x100 gnd vdd FILL
+XSFILL8080x2100 gnd vdd FILL
+XSFILL3440x100 gnd vdd FILL
+X_95_ _95_/A gnd out vdd BUFX2
+X_78_ _78_/A _78_/B _81_/C gnd _79_/B vdd AOI21X1
+X_94_ _94_/A gnd change[1] vdd BUFX2
+X_77_ _86_/C _77_/B _77_/C gnd _79_/C vdd NAND3X1
+X_76_ rst _79_/A in[1] gnd _77_/B vdd OAI21X1
+X_93_ _93_/A gnd change[0] vdd BUFX2
+X_92_ _92_/Q clk _92_/D gnd vdd DFFPOSX1
+X_75_ _94_/A gnd _79_/A vdd INVX1
+XSFILL7920x2100 gnd vdd FILL
+X_59_ in[0] gnd _84_/B vdd INVX1
+X_58_ _81_/A _86_/C gnd _62_/B vdd NAND2X1
+X_91_ _94_/A clk _91_/D gnd vdd DFFPOSX1
+X_57_ _92_/Q rst _70_/C gnd _86_/C vdd NOR3X1
+X_74_ _74_/A _74_/B _74_/C gnd _90_/D vdd NAND3X1
+X_56_ _88_/Q gnd _70_/C vdd INVX1
+X_73_ _78_/B _73_/B _93_/A _81_/C gnd _74_/C vdd AOI22X1
+X_90_ _93_/A clk _90_/D gnd vdd DFFPOSX1
+XSFILL7920x100 gnd vdd FILL
+XSFILL3440x2100 gnd vdd FILL
+X_72_ _92_/Q rst _72_/C gnd _73_/B vdd NOR3X1
+XSFILL8240x4100 gnd vdd FILL
+X_55_ _55_/A _55_/B gnd _92_/D vdd NAND2X1
+XSFILL3600x100 gnd vdd FILL
+X_71_ _78_/A _88_/Q _71_/C gnd _78_/B vdd AOI21X1
+X_54_ _88_/Q _81_/A _61_/C gnd _55_/A vdd OAI21X1
+X_70_ rst _70_/B _70_/C gnd _81_/C vdd NOR3X1
+X_53_ _71_/C gnd _81_/A vdd INVX1
+X_52_ in[0] in[1] gnd _71_/C vdd NAND2X1
+XFILL9520x6100 gnd vdd FILL
+X_51_ rst _70_/B gnd _61_/C vdd NOR2X1
+X_50_ _92_/Q gnd _70_/B vdd INVX1
+XSFILL3120x4100 gnd vdd FILL
+XSFILL2640x4100 gnd vdd FILL
+X_89_ _95_/A clk _89_/D gnd vdd DFFPOSX1
+XSFILL7440x6100 gnd vdd FILL
+X_88_ _88_/Q clk _88_/D gnd vdd DFFPOSX1
+XSFILL3440x6100 gnd vdd FILL
+X_87_ _87_/A _87_/B _87_/C gnd _89_/D vdd OAI21X1
+XFILL9520x100 gnd vdd FILL
+X_69_ _86_/A _69_/B _77_/C gnd _74_/B vdd NAND3X1
+X_86_ _86_/A _86_/B _86_/C _86_/D gnd _87_/C vdd AOI22X1
+X_68_ rst _72_/C in[1] gnd _69_/B vdd OAI21X1
+X_85_ _85_/A _85_/B _85_/C gnd _86_/D vdd NAND3X1
+X_67_ in[0] in[1] gnd _77_/C vdd XNOR2X1
+XSFILL7760x2100 gnd vdd FILL
+X_84_ in[1] _84_/B gnd _85_/C vdd NAND2X1
+.ends
+

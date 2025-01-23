@@ -1,0 +1,254 @@
+Qflow static timing analysis logfile created on Mon Jan 6 19:53:17 WIB 2025
+Converting qrouter output to vesta delay format
+Running rc2dly -r vending_machine_18105070.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/asd01a/Documents/Kelompok_5/synthesis/vending_machine_18105070.rtl.v
+-d vending_machine_18105070.dly
+Converting qrouter output to SPEF delay format
+Running rc2dly -D : -r vending_machine_18105070.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/asd01a/Documents/Kelompok_5/synthesis/vending_machine_18105070.rtl.v
+-d vending_machine_18105070.spef
+Converting qrouter output to SDF delay format
+Running rc2dly -r vending_machine_18105070.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/asd01a/Documents/Kelompok_5/synthesis/vending_machine_18105070.rtl.v
+-d vending_machine_18105070.sdf
+Running vesta static timing analysis with back-annotated extracted wire delays
+vesta -c -d vending_machine_18105070.dly --long vending_machine_18105070.rtlnopwr.v /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.103
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu035_stdcells"
+End of library at line 6636
+Lib read /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib:  Processed 6637 lines.
+Parsing module "vending_machine_18105070"
+ERROR: Net rst had 1 receiver in delay file,  but expected a fanout of 9
+Verilog netlist read:  Processed 493 lines.
+Number of paths analyzed:  7
+
+Top 7 maximum delay paths:
+Path _88_/CLK to _91_/D delay 1437.55 ps
+      0.0 ps         clk:        -> _88_/CLK
+    384.5 ps  n_state[1]: _88_/Q -> _56_/A
+    574.4 ps        _13_: _56_/Y -> _57_/C
+    832.0 ps        _14_: _57_/Y -> _77_/A
+   1050.8 ps        _32_: _77_/Y -> _79_/C
+   1156.6 ps     _43_[1]: _79_/Y -> _91_/D
+
+   clock skew at destination = 0
+   setup at destination = 280.999
+
+Path _88_/CLK to _90_/D delay 1421.93 ps
+      0.0 ps         clk:        -> _88_/CLK
+    384.5 ps  n_state[1]: _88_/Q -> _56_/A
+    574.4 ps        _13_: _56_/Y -> _57_/C
+    832.0 ps        _14_: _57_/Y -> _65_/C
+    997.7 ps        _21_: _65_/Y -> _74_/A
+   1142.4 ps     _43_[0]: _74_/Y -> _90_/D
+
+   clock skew at destination = 0
+   setup at destination = 279.527
+
+Path _92_/CLK to _89_/D delay 1405.33 ps
+      0.0 ps         clk:        -> _92_/CLK
+    369.9 ps  n_state[2]: _92_/Q -> _50_/A
+    596.9 ps         _8_: _50_/Y -> _70_/B
+    882.3 ps        _26_: _70_/Y -> _81_/C
+   1014.0 ps        _35_: _81_/Y -> _87_/B
+   1124.5 ps         _1_: _87_/Y -> _89_/D
+
+   clock skew at destination = 0
+   setup at destination = 280.819
+
+Path _88_/CLK to _88_/D delay 1388.14 ps
+      0.0 ps         clk:        -> _88_/CLK
+    384.5 ps  n_state[1]: _88_/Q -> _56_/A
+    574.4 ps        _13_: _56_/Y -> _57_/C
+    832.0 ps        _14_: _57_/Y -> _58_/B
+    983.1 ps        _15_: _58_/Y -> _62_/B
+   1106.5 ps      _0_[1]: _62_/Y -> _88_/D
+
+   clock skew at destination = 0
+   setup at destination = 281.608
+
+Path _92_/CLK to _92_/D delay 1245.69 ps
+      0.0 ps         clk:        -> _92_/CLK
+    369.9 ps  n_state[2]: _92_/Q -> _50_/A
+    596.9 ps         _8_: _50_/Y -> _51_/B
+    748.0 ps         _9_: _51_/Y -> _54_/C
+    862.7 ps        _12_: _54_/Y -> _55_/A
+    963.4 ps      _0_[0]: _55_/Y -> _92_/D
+
+   clock skew at destination = 0
+   setup at destination = 282.273
+
+Path _90_/CLK to output pin change[0] delay 478.079 ps
+      0.0 ps        clk:        -> _90_/CLK
+    340.4 ps    _41_[0]: _90_/Q -> _93_/A
+    478.1 ps  change[0]: _93_/Y -> change[0]
+
+Path _91_/CLK to output pin change[1] delay 327.973 ps
+      0.0 ps        clk:        -> _91_/CLK
+    223.3 ps    _41_[1]: _91_/Q -> _94_/A
+    328.0 ps  change[1]: _94_/Y -> change[1]
+
+Computed maximum clock frequency (zero margin) = 695.626 MHz
+-----------------------------------------
+
+Number of paths analyzed:  7
+
+Top 7 minimum delay paths:
+Path _91_/CLK to output pin change[1] delay 163.226 ps
+      0.0 ps        clk:        -> _91_/CLK
+     66.6 ps    _41_[1]: _91_/Q -> _94_/A
+    163.2 ps  change[1]: _94_/Y -> change[1]
+
+Path _91_/CLK to _91_/D delay 176.073 ps
+      0.0 ps      clk:        -> _91_/CLK
+     66.6 ps  _41_[1]: _91_/Q -> _75_/A
+    186.5 ps     _30_: _75_/Y -> _79_/A
+    278.1 ps  _43_[1]: _79_/Y -> _91_/D
+
+   clock skew at destination = 0
+   hold at destination = -101.982
+
+Path _89_/CLK to _89_/D delay 207.795 ps
+      0.0 ps   clk:        -> _89_/CLK
+    134.0 ps  _42_: _89_/Q -> _80_/A
+    221.7 ps  _34_: _80_/Y -> _87_/A
+    308.4 ps   _1_: _87_/Y -> _89_/D
+
+   clock skew at destination = 0
+   hold at destination = -100.577
+
+Path _90_/CLK to _90_/D delay 223.873 ps
+      0.0 ps      clk:        -> _90_/CLK
+    158.8 ps  _41_[0]: _90_/Q -> _73_/C
+    269.4 ps     _29_: _73_/Y -> _74_/C
+    322.7 ps  _43_[0]: _74_/Y -> _90_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.8718
+
+Path _90_/CLK to output pin change[0] delay 267.064 ps
+      0.0 ps        clk:        -> _90_/CLK
+    158.8 ps    _41_[0]: _90_/Q -> _93_/A
+    267.1 ps  change[0]: _93_/Y -> change[0]
+
+Path _88_/CLK to _92_/D delay 345.272 ps
+      0.0 ps         clk:        -> _88_/CLK
+    277.7 ps  n_state[1]: _88_/Q -> _54_/A
+    394.6 ps        _12_: _54_/Y -> _55_/A
+    443.7 ps      _0_[0]: _55_/Y -> _92_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.4003
+
+Path _88_/CLK to _88_/D delay 358.072 ps
+      0.0 ps         clk:        -> _88_/CLK
+    277.7 ps  n_state[1]: _88_/Q -> _61_/A
+    403.9 ps        _18_: _61_/Y -> _62_/C
+    457.0 ps      _0_[1]: _62_/Y -> _88_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.9654
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  5
+
+Top 5 maximum delay paths:
+Path input pin in[1] to _88_/D delay 887.221 ps
+      0.0 ps   in[1]:        -> _44_/A
+     99.8 ps     _2_: _44_/Y -> _45_/B
+    235.5 ps     _3_: _45_/Y -> _46_/A
+    376.9 ps     _4_: _46_/Y -> _61_/B
+    506.6 ps    _18_: _61_/Y -> _62_/C
+    603.9 ps  _0_[1]: _62_/Y -> _88_/D
+
+   setup at destination = 283.303
+
+Path input pin in[1] to _89_/D delay 858.548 ps
+      0.0 ps  in[1]:        -> _44_/A
+     99.8 ps    _2_: _44_/Y -> _45_/B
+    235.5 ps    _3_: _45_/Y -> _85_/B
+    388.2 ps   _39_: _85_/Y -> _86_/D
+    490.6 ps   _40_: _86_/Y -> _87_/C
+    576.7 ps    _1_: _87_/Y -> _89_/D
+
+   setup at destination = 281.886
+
+Path input pin in[1] to _92_/D delay 837.691 ps
+      0.0 ps   in[1]:        -> _44_/A
+     99.8 ps     _2_: _44_/Y -> _45_/B
+    235.5 ps     _3_: _45_/Y -> _46_/A
+    376.9 ps     _4_: _46_/Y -> _49_/B
+    479.0 ps     _7_: _49_/Y -> _55_/B
+    553.7 ps  _0_[0]: _55_/Y -> _92_/D
+
+   setup at destination = 283.957
+
+Path input pin in[0] to _90_/D delay 798.004 ps
+      0.0 ps    in[0]:        -> _52_/A
+    106.9 ps     _10_: _52_/Y -> _71_/C
+    268.7 ps     _27_: _71_/Y -> _73_/A
+    414.0 ps     _29_: _73_/Y -> _74_/C
+    515.1 ps  _43_[0]: _74_/Y -> _90_/D
+
+   setup at destination = 282.86
+
+Path input pin in[0] to _91_/D delay 779.552 ps
+      0.0 ps    in[0]:        -> _52_/A
+    106.9 ps     _10_: _52_/Y -> _71_/C
+    268.7 ps     _27_: _71_/Y -> _78_/B
+    392.4 ps     _33_: _78_/Y -> _79_/B
+    498.5 ps  _43_[1]: _79_/Y -> _91_/D
+
+   setup at destination = 281.016
+
+-----------------------------------------
+
+Number of paths analyzed:  5
+
+Top 5 minimum delay paths:
+Path input pin in[1] to _88_/D delay 58.9841 ps
+      0.0 ps   in[1]:        -> _60_/B
+     99.3 ps    _17_: _60_/Y -> _62_/A
+    157.7 ps  _0_[1]: _62_/Y -> _88_/D
+
+   hold at destination = -98.705
+
+Path input pin in[1] to _90_/D delay 77.793 ps
+      0.0 ps    in[1]:        -> _65_/A
+    119.9 ps     _21_: _65_/Y -> _74_/A
+    177.5 ps  _43_[0]: _74_/Y -> _90_/D
+
+   hold at destination = -99.6883
+
+Path input pin in[1] to _91_/D delay 114.531 ps
+      0.0 ps    in[1]:        -> _76_/C
+     72.0 ps     _31_: _76_/Y -> _77_/B
+    137.0 ps     _32_: _77_/Y -> _79_/C
+    215.8 ps  _43_[1]: _79_/Y -> _91_/D
+
+   hold at destination = -101.284
+
+Path input pin in[1] to _89_/D delay 211.13 ps
+      0.0 ps  in[1]:        -> _84_/A
+     79.9 ps   _38_: _84_/Y -> _85_/C
+    153.0 ps   _39_: _85_/Y -> _86_/D
+    245.2 ps   _40_: _86_/Y -> _87_/C
+    309.5 ps    _1_: _87_/Y -> _89_/D
+
+   hold at destination = -98.342
+
+Path input pin in[0] to _92_/D delay 279.717 ps
+      0.0 ps   in[0]:        -> _45_/A
+    105.5 ps     _3_: _45_/Y -> _46_/A
+    231.4 ps     _4_: _46_/Y -> _49_/B
+    326.0 ps     _7_: _49_/Y -> _55_/B
+    376.3 ps  _0_[0]: _55_/Y -> _92_/D
+
+   hold at destination = -96.5682
+
+-----------------------------------------
+

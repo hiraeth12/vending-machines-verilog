@@ -1,0 +1,261 @@
+[
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "Q",
+        "CLK",
+        "D",
+        "gnd",
+        "vdd"
+      ], [
+        "Q",
+        "CLK",
+        "D",
+        "gnd",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "vending_machine_18105070",
+      "vending_machine_18105070"
+   ],
+   "devices": [
+       [
+         ["NOR3X1", 4],
+         ["NAND2X1", 7],
+         ["OAI21X1", 9],
+         ["NAND3X1", 7],
+         ["AOI21X1", 3],
+         ["INVX1", 10],
+         ["BUFX2", 3],
+         ["DFFPOSX1", 5],
+         ["AOI22X1", 2],
+         ["NOR2X1", 1],
+         ["XNOR2X1", 1 ]
+       ], [
+         ["NOR3X1", 4 ],
+         ["NAND2X1", 7 ],
+         ["OAI21X1", 9 ],
+         ["NAND3X1", 7 ],
+         ["AOI21X1", 3 ],
+         ["INVX1", 10 ],
+         ["BUFX2", 3 ],
+         ["DFFPOSX1", 5 ],
+         ["AOI22X1", 2 ],
+         ["NOR2X1", 1 ],
+         ["XNOR2X1", 1 ]
+       ]
+   ],
+   "nets": [
+    58,
+    58
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "change[1]",
+        "change[0]",
+        "out",
+        "clk",
+        "in[0]",
+        "vdd",
+        "gnd",
+        "in[1]",
+        "rst"
+      ], [
+        "change[1]",
+        "change[0]",
+        "out",
+        "clk",
+        "in[0]",
+        "vdd",
+        "gnd",
+        "in[1]",
+        "rst"
+      ]
+   ]
+  }
+]
